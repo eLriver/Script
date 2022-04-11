@@ -561,7 +561,7 @@ function elr:CreateWindow(elrName)
                     local info = Instance.new("TextLabel")
 
                     toginfoElement.Name = "toginfoElement"
-                    toginfoElement.Parent = game.StarterGui.ScreenGui.Main.pages.Pages.Page.sectionFrame.sectioninners
+                    toginfoElement.Parent = sectioninners
                     toginfoElement.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
                     toginfoElement.BorderSizePixel = 0
                     toginfoElement.Position = UDim2.new(0, 0, 0.558558583, 0)
