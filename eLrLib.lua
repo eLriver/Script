@@ -57,11 +57,11 @@ function elr:ToggleUI()
     UserInputService.InputBegan:Connect(function (Input)
         if Input.KeyCode == Enum.KeyCode.RightControl and uistate == true then
             uistate = false
-            game:GetService("CoreGui").EndLessRiver.Enabled = false
+            game:GetService("CoreGui").eLriver.Enabled = false
         else
             if Input.KeyCode == Enum.KeyCode.RightControl and uistate == false then
                 uistate = true
-                game:GetService("CoreGui").EndLessRiver.Enabled = true
+                game:GetService("CoreGui").eLriver.Enabled = true
             end
         end
     end)
