@@ -419,6 +419,10 @@ function elr:CreateWindow(elrName)
                     btn.MouseButton1Click:Connect(function ()
                         callback()
                     end)
+
+                    function ButtonFunction:UpdateButton(newtitle)
+                        BtnName.Text = newtitle
+                    end
                     return ButtonFunction
                 end
                 
@@ -534,6 +538,25 @@ function elr:CreateWindow(elrName)
                         toggled = not toggled
                         pcall(callback, toggled)
                     end)
+                    function TogFunction:UpdateToggle(newtitle, isTogOn)
+                        isTogOn = isTogOn or toggle
+                        if newtitle ~= nil then
+                            tgleName.Text = newtitle
+                        end
+                        if isTogOn then
+                            toggled = true
+                            game.TweenService:Create(img, TweenInfo.new(0.11, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
+                                ImageTransparency = 0
+                            }):Play()
+                            pcall(callback, toggled)
+                        else
+                            toggled = false
+                            game.TweenService:Create(img, TweenInfo.new(0.11, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
+                                ImageTransparency = 1
+                            }):Play()
+                            pcall(callback, toggled)
+                        end
+                    end
                     return TogFunction
                 end
 
@@ -677,6 +700,25 @@ function elr:CreateWindow(elrName)
                         toggled = not toggled
                         pcall(callback, toggled)
                     end)
+                    function ToginfoFunction:UpdateToggle(newtitle, isTogOn)
+                        isTogOn = isTogOn or toggle
+                        if newtitle ~= nil then
+                            tgleName.Text = newtitle
+                        end
+                        if isTogOn then
+                            toggled = true
+                            game.TweenService:Create(img, TweenInfo.new(0.11, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
+                                ImageTransparency = 0
+                            }):Play()
+                            pcall(callback, toggled)
+                        else
+                            toggled = false
+                            game.TweenService:Create(img, TweenInfo.new(0.11, Enum.EasingStyle.Linear,Enum.EasingDirection.In), {
+                                ImageTransparency = 1
+                            }):Play()
+                            pcall(callback, toggled)
+                        end
+                    end
                     return ToginfoFunction
                 end
 
