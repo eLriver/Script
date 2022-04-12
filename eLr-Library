@@ -96,7 +96,7 @@ function elr:CreateWindow(elrName)
     elr:DraggingEnabled(TopBar, Main)
     elr:ToggleUI()
 
-    ScreenGui.Name = "EndLessRiver"
+    ScreenGui.Name = "eLriver"
     ScreenGui.Parent = game:GetService("CoreGui")
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
